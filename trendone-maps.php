@@ -13,6 +13,7 @@ Domain Path: /languages
 */
 
 
+const TRENDONE_MAPS = '_trendone_maps_';
 if ( ! class_exists( 'TrendOne_Maps' ) ) {
 	class TrendOne_Maps extends WP_Widget {
 
@@ -80,6 +81,8 @@ if ( ! class_exists( 'TrendOne_Maps' ) ) {
 			$i['google_maps_api_key']      = esc_attr( $new_instance['google_maps_api_key'] );
 			$i['google_maps_query_string'] = esc_attr( $new_instance['google_maps_query_string'] );
 
+			$this->update_options($i);
+
 			return $i;
 		}
 
@@ -117,6 +120,12 @@ if ( ! class_exists( 'TrendOne_Maps' ) ) {
 			return sprintf("https://www.google.com/maps/embed/v1/place?key=%s&q=%s", $this->apiKey, $this->queryString);
 
 		}
+
+		private function update_options( $i ) {
+			foreach($i as $opt => $val) {
+				update_option(TRENDONE_MAPS . $opt, $val);
+			}
+		}
 	}
 
 
@@ -126,6 +135,17 @@ if ( ! class_exists( 'TrendOne_Maps' ) ) {
 	}
 
 	add_action( 'plugins_loaded', 'myplugin_init' );
+
+	add_shortcode('trendone_maps', function($attrs) {
+		if(!array_key_exists('part', $attrs))
+		{
+			return '';
+		}
+
+		$option = TRENDONE_MAPS . $attrs['part'];
+
+		return get_option($option);
+	});
 
 	add_action( 'widgets_init', function () {
 		register_widget( "Trendone_Maps" );
