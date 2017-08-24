@@ -49,8 +49,8 @@
                 </div>
 
             </div>
-            <div class="col-sm-6 map-responsive">
-                <iframe
+            <div class="col-sm-6 embed-responsive">
+                <iframe class="embed-responsive-item"
                         width="<?php echo $this->mapWidth ?>"
                         height="<?php echo $this->mapHeight ?>"
                         frameborder="0" style="border:0"
