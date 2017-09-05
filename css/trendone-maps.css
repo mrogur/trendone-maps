@@ -5,12 +5,7 @@
 .trendone-maps li {
     list-style: none;
 }
-.trendone-maps-name {
-}
-.trendone-maps-address {
-}
 
-.trendone-frontpage-widgets {
-
+.maps-container iframe {
+    width: 97% !important;
 }
-

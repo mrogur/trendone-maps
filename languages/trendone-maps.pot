@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: trendone-maps 1.0\n"
+"POT-Creation-Date: 2017-09-05 13:37+0200\n"
+"PO-Revision-Date: 2017-09-05 13:37+0200\n"
+"Last-Translator: \n"
+"Language-Team: TrendAir\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;_nx;_n_noop;_nx_noop;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: trendone-maps.php:52
+msgid "TrendOne Google Maps Widget"
+msgstr ""
+
+#: trendone-settings-form.php:12
+msgid "Title"
+msgstr ""
+
+#: trendone-settings-form.php:24
+msgid "Name"
+msgstr ""
+
+#: trendone-settings-form.php:36
+msgid "Street Addr"
+msgstr ""
+
+#: trendone-settings-form.php:48
+msgid "Postal Code"
+msgstr ""
+
+#: trendone-settings-form.php:61
+msgid "City"
+msgstr ""
+
+#: trendone-settings-form.php:73
+msgid "Direction Tips"
+msgstr ""
+
+#: trendone-settings-form.php:86
+msgid "Emails (comma sep.)"
+msgstr ""
+
+#: trendone-settings-form.php:98
+msgid "Phones (comma sep.)"
+msgstr ""
+
+#: trendone-settings-form.php:111
+msgid "Google Maps API Key"
+msgstr ""
+
+#: trendone-settings-form.php:123
+msgid "Google Maps Map Width"
+msgstr ""
+
+#: trendone-settings-form.php:135
+msgid "Google Maps Map Height"
+msgstr ""
+
+#: trendone-settings-form.php:148
+msgid "Google Maps Query String"
+msgstr ""

@@ -4,7 +4,7 @@
     <!--<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">-->
     <div class="container">
         <div class="row trendone-maps">
-            <div class="col-sm-6">
+            <div class="col-sm-12 col-md-6">
                 <div class="trendone-maps-name">
                     <h5>
 						<?php echo $this->trendoneName; ?>
@@ -49,7 +49,7 @@
                 </div>
 
             </div>
-            <div class="col-sm-6 embed-responsive">
+            <div class="col-sm-12 col-md-6 embed-responsive maps-container">
                 <iframe class="embed-responsive-item"
                         width="<?php echo $this->mapWidth ?>"
                         height="<?php echo $this->mapHeight ?>"
