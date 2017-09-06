@@ -60,6 +60,10 @@ add_shortcode( 'trendone-maps-content', function ( $attrs ) {
 
 
 } );
+
+/**
+ * Shortcode for map presentation
+ */
 add_shortcode( 'trendone-map', function ( $attrs ) {
 	$mapWidth    = empty( $attrs['width'] ) ? get_option( TRENDONE_MAPS . 'map_width' ) : $attrs['width'];
 	$mapHeight   = empty( $attrs['height'] ) ? get_option( TRENDONE_MAPS . 'map_height' ) : $attrs['height'];
@@ -70,17 +74,16 @@ add_shortcode( 'trendone-map', function ( $attrs ) {
 	$mapUrl = sprintf( "https://www.google.com/maps/embed/v1/place?key=%s&q=%s", $apiKey, $queryString );
 	ob_start(); ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 embed-responsive" style="padding-top: <?php echo "$aspectRatio% !important;" ?>">
-                <iframe class="embed-responsive-item" style="flex: 0 0 auto;"
-                        width="<?php echo $mapWidth ?>"
-                        height="<?php echo $mapHeight ?>"
-                        frameborder="0" style="border:0"
-                        src="<?php echo $mapUrl ?>"
-                        allowfullscreen>
-                </iframe>
-            </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 embed-responsive"
+             style="padding-bottom: <?php echo "$aspectRatio% !important;" ?>">
+            <iframe class="embed-responsive-item"
+                    width="<?php echo $mapWidth ?>"
+                    height="<?php echo $mapHeight ?>"
+                    frameborder="0" style="border:0"
+                    src="<?php echo $mapUrl ?>"
+                    allowfullscreen>
+            </iframe>
         </div>
     </div>
 	<?php

@@ -106,22 +106,6 @@ class TrendOne_Maps extends WP_Widget {
 
 	}
 
-//		public function get_map_iframe() {
-//			$map = /** @lang html */
-//				<<<HTML;
-//				 <iframe class="embed-responsive-item"
-//                        width="$this->mapWidth"
-//                        height="$this->mapHeight"
-//                        frameborder="0" style="border:0"
-//                        src="$this->prepare_maps_url();"
-//                        allowfullscreen>
-//                </iframe>
-//HTML;
-//
-//			return $map;
-//		}
-
-
 	private function update_options( $i ) {
 		foreach ( $i as $opt => $val ) {
 			update_option( TRENDONE_MAPS . $opt, $val );
