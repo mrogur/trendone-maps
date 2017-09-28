@@ -74,16 +74,17 @@ add_shortcode( 'trendone-map', function ( $attrs ) {
 	$mapUrl = sprintf( "https://www.google.com/maps/embed/v1/place?key=%s&q=%s", $apiKey, $queryString );
 	ob_start(); ?>
 
-    <div class="row">
-        <div class="col-sm-12 col-md-12 embed-responsive"
-             style="padding-bottom: <?php echo "$aspectRatio% !important;" ?>">
-            <iframe class="embed-responsive-item"
+    <div class="map-container mb-3">
+        <div class="embed-responsive"
+             style="min-height: <?php echo $mapHeight."px" ?> ; padding-bottom: <?php echo "$aspectRatio%;" ?>">
+                <iframe class="embed-responsive-item"
                     width="<?php echo $mapWidth ?>"
                     height="<?php echo $mapHeight ?>"
                     frameborder="0" style="border:0"
                     src="<?php echo $mapUrl ?>"
                     allowfullscreen>
             </iframe>
+
         </div>
     </div>
 	<?php
